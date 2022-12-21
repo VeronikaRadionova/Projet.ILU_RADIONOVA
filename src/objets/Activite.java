@@ -11,4 +11,6 @@ public class Activite {
 		this.thematique = thematique;
 		this.status = status;
 	}
+	
+	
 }
