@@ -6,6 +6,9 @@ public class Enfant {
 	private Endroit visites[];
 	private int nbVisites = 0;
 	
-	public Enfant() {
+	public Enfant(String nom, int nbPointsGagne, int nbVisites) {
+		this.nom = nom;
+		this.nbPointsGagne = nbPointsGagne;
+		this.visites = new Endroit[nbVisites];
 	}
 }
