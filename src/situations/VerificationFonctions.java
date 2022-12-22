@@ -1,6 +1,6 @@
 package situations;
 
-public class Scenario {
+public class VerificationFonctions {
 
 	public static void main(String[] args) {
 		
