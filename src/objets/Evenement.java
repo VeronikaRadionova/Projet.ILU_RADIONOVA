@@ -6,7 +6,7 @@ public class Evenement extends Activite {
 	private int nbPointsEvent;
 	private Endroit endroit;
 	
-	private String horraires; // ? nujno li mne eto (à ne pas utiliser pour l'instant)
+	// private String horraires; ? nujno li mne eto (à ne pas utiliser pour l'instant)
 	
 	public Evenement(String nom, String thematique, String status, int nbPointsEvent, Endroit endroit) {
 		super(thematique, status);

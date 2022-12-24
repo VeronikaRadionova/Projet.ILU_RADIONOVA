@@ -3,16 +3,14 @@ package objets;
 public class Endroit {
 	private String nom;
 	private int nbPoints;
-	private int nbVisitesLieu;
-	private String status; //si l'endroit est visité ou pas (pour les ljeux)
+	private int nbVisitesLieu = 0;
 	
-	private String adresse; // à ne pas utiliser pour l'instant
+	// private String adresse; à ne pas utiliser pour l'instant
 	
-	public Endroit(String nom, int nbPoints, int nbVisitesLieu, String status) {
+	public Endroit(String nom, int nbPoints, int nbVisitesLieu) {
 		this.nom = nom;
 		this.nbPoints = nbPoints;
 		this.nbVisitesLieu = nbVisitesLieu;
-		this.status = status;
 		
 		
 	}
@@ -25,8 +23,9 @@ public class Endroit {
 		return nbPoints;
 	}
 
-	public String getStatus() {
-		return status;
+	public int getNbVisitesLieu() {
+		return nbVisitesLieu;
 	}
 	
+
 }
