@@ -24,6 +24,22 @@ public class Enfant {
 		return nbPointsGagne;
 	}
 	
+	public String[] getPreferences() {
+		return preferences;
+	}
+	
+	public void setPreferences(String[] preferences) {
+		this.preferences = preferences;
+	}
+
+	public int getNbPreferences() {
+		return nbPreferences;
+	}
+
+	public void setNbPreferences(int nbPreferences) {
+		this.nbPreferences = nbPreferences;
+	}
+
 	public void parler(String texte) {
 	    System.out.println(nom + " : " + texte);
 	}
@@ -32,22 +48,29 @@ public class Enfant {
 		parler("Je m'appelle " + nom + " et j'ai " + nbPointsGagne + " points. Je veux en avoir plus !");
 	}
 	
-	public String[] ajouterPreferences(String texte) {
-		String[] preferences = new String[nbPreferences];
+	public void ajouterPreferences(String texte) {
+		String[] thpreferes = new String[nbPreferences];
 		int i = 0;
 		while (i < nbPreferences) {
-			if (preferences[i] != texte) {
+			if (thpreferes[i] != texte) {
 				i = i + 1;
-			} else {
-				return preferences;
 			}
-		}
-		nbPreferences = nbPreferences + 1;
-		preferences[nbPreferences] = texte;
-		return preferences;
+		}	
+		thpreferes[nbPreferences-1] = texte;
+		setPreferences(thpreferes);
+		setNbPreferences(nbPreferences + 1);
+		
+		//System.out.println(getNbPreferences());
 	}
 	
-	public void choisirActivite(Activite activite) {
-		
+	public int choisirActivite(Activite activite) {
+		for (int i = 0; i < nbPreferences-1; i++) {
+			if (preferences[i] == activite.getThematique() ) {
+				parler("Oui, pourquoi pas !!!");
+				return i;
+			}
+		}
+		parler("Non, je ne veux pas le faire :(");
+		return 0;
 	}
 }
