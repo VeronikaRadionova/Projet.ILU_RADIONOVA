@@ -6,14 +6,14 @@ public class Enfant {
 	private Endroit visites[];
 	private int nbVisites = 0;
 	
-	private String preferences[]; // thematiques préférées de l'enfant (mots avec des articles définies)
+	private Thematiques preferences[]; // thematiques préférées de l'enfant (mots avec des articles définies)
 	private int nbPreferences = 1;
 	
 	public Enfant(String nom, int nbPointsGagne, int nbVisites, int nbPreferences) {
 		this.nom = nom;
 		this.nbPointsGagne = nbPointsGagne;
 		this.visites = new Endroit[nbVisites];
-		this.preferences = new String[nbPreferences];
+		this.preferences = new Thematiques[nbPreferences];
 	}
 
 	public String getNom() {
@@ -24,13 +24,14 @@ public class Enfant {
 		return nbPointsGagne;
 	}
 	
-	public String[] getPreferences() {
+	public Thematiques[] getPreferences() {
 		return preferences;
 	}
-	
-	public void setPreferences(String[] preferences) {
+
+	public void setPreferences(Thematiques[] preferences) {
 		this.preferences = preferences;
 	}
+
 
 	public int getNbPreferences() {
 		return nbPreferences;
@@ -57,11 +58,46 @@ public class Enfant {
 			}
 		}	
 		thpreferes[nbPreferences-1] = texte;
-		setPreferences(thpreferes);
+		//setPreferences(thpreferes);
 		setNbPreferences(nbPreferences + 1);
 		
 		//System.out.println(getNbPreferences());
 	}
+	
+	
+	public void ajouterThematiques(Thematiques thematique) {
+		Thematiques[] thpreferes = new Thematiques[nbPreferences];
+		switch (thematique) {
+		case MUSIQUE :
+			thpreferes[nbPreferences-1] = thematique;
+			setNbPreferences(nbPreferences + 1);
+			break;
+		case SCIENCES :
+			thpreferes[nbPreferences-1] = thematique;
+			setNbPreferences(nbPreferences + 1);
+			break;
+		case MEDECINE :
+			thpreferes[nbPreferences-1] = thematique;
+			setNbPreferences(nbPreferences + 1);
+			break;
+		case NATURE :
+			thpreferes[nbPreferences-1] = thematique;
+			setNbPreferences(nbPreferences + 1);
+			break;
+		case ESPACE :
+			thpreferes[nbPreferences-1] = thematique;
+			setNbPreferences(nbPreferences + 1);
+			break;
+		case HISTOIRE :
+			thpreferes[nbPreferences-1] = thematique;
+			setNbPreferences(nbPreferences + 1);
+			break;
+		default :
+			setNbPreferences(nbPreferences);
+		}
+		System.out.println(nbPreferences);
+	}
+	
 	
 	public int choisirActivite(Activite activite) {
 		for (int i = 0; i < nbPreferences-1; i++) {
@@ -73,4 +109,6 @@ public class Enfant {
 		parler("Non, je ne veux pas le faire :(");
 		return 0;
 	}
+	
+	
 }

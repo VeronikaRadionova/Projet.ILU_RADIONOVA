@@ -5,7 +5,7 @@ public class Jeu extends Activite {
 	private Endroit aVisiter[];
 	private int nbEndroits = 1;
 	
-	public Jeu(String thematique, String status, int nbEndroits) {
+	public Jeu(Thematiques thematique, String status, int nbEndroits) {
 		super(thematique, status);
 		this.aVisiter = new Endroit[nbEndroits];
 	}

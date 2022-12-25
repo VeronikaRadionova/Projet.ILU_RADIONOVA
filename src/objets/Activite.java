@@ -2,17 +2,17 @@ package objets;
 
 public class Activite {
 	private String status; // si l'activité est finie, en cours ou pas commencée
-	protected String thematique; // mot avec l'article définie
+	protected Thematiques thematique; // mot avec l'article définie
 	
 	//private String dateDebut;  jour et mois (à ne pas utiliser pour l'instant)
 	//private String dateFin;  jour et mois
 	
-	public Activite(String thematique, String status) {
+	public Activite(Thematiques thematique, String status) {
 		this.thematique = thematique;
 		this.status = status;
 	}
-
-	public String getThematique() {
+	
+	public Thematiques getThematique() {
 		return thematique;
 	}
 
