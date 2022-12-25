@@ -3,13 +3,15 @@ package objets;
 public class Activite {
 	private String status; // si l'activité est finie, en cours ou pas commencée
 	protected Thematiques thematique; // mot avec l'article définie
+	private int nbPoints;
 	
 	//private String dateDebut;  jour et mois (à ne pas utiliser pour l'instant)
 	//private String dateFin;  jour et mois
 	
-	public Activite(Thematiques thematique, String status) {
+	public Activite(Thematiques thematique, String status, int nbPoints) {
 		this.thematique = thematique;
 		this.status = status;
+		this.nbPoints = nbPoints;
 	}
 	
 	public Thematiques getThematique() {
@@ -20,6 +22,14 @@ public class Activite {
 		return status;
 	}
 	
+	public int getNbPoints() {
+		return nbPoints;
+	}
+
+	public void setNbPoints(int nbPoints) {
+		this.nbPoints = nbPoints;
+	}
+
 	public void parler(String texte) {
 	    System.out.println(texte);
 	} 

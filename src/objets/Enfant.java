@@ -2,7 +2,7 @@ package objets;
 
 public class Enfant {
 	private String nom;
-	private int nbPointsGagne = 0;
+	private int nbPointsGagnes = 0;
 	private Endroit visites[];
 	private int nbVisites = 0;
 	
@@ -11,7 +11,7 @@ public class Enfant {
 	
 	public Enfant(String nom, int nbPointsGagne, int nbVisites, int nbPreferences) {
 		this.nom = nom;
-		this.nbPointsGagne = nbPointsGagne;
+		this.nbPointsGagnes = nbPointsGagne;
 		this.visites = new Endroit[nbVisites];
 		this.preferences = new Thematiques[nbPreferences];
 	}
@@ -20,8 +20,8 @@ public class Enfant {
 		return nom;
 	}
 
-	public int getNbPointsGagne() {
-		return nbPointsGagne;
+	public int getNbPointsGagnes() {
+		return nbPointsGagnes;
 	}
 	
 	public Thematiques[] getPreferences() {
@@ -46,7 +46,7 @@ public class Enfant {
 	}
 	
 	public void sePresenter() {
-		parler("Je m'appelle " + nom + " et j'ai " + nbPointsGagne + " points. Je veux en avoir plus !");
+		parler("Je m'appelle " + nom + " et j'ai " + nbPointsGagnes + " points. Je veux en avoir plus !");
 	}
 	
 	public void ajouterPreferences(String texte) {
@@ -91,5 +91,7 @@ public class Enfant {
 		return 0;
 	}
 	
-	
+	public int gagnerPoints(Activite activite) {
+		return getNbPointsGagnes() + activite.getNbPoints();
+	}
 }

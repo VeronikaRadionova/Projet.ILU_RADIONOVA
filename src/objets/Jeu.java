@@ -5,8 +5,8 @@ public class Jeu extends Activite {
 	private Endroit aVisiter[];
 	private int nbEndroits = 1;
 	
-	public Jeu(Thematiques thematique, String status, int nbEndroits) {
-		super(thematique, status);
+	public Jeu(Thematiques thematique, String status, int nbPoints, int nbEndroits) {
+		super(thematique, status, nbPoints);
 		this.aVisiter = new Endroit[nbEndroits];
 	}
 	
