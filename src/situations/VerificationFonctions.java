@@ -15,16 +15,16 @@ public class VerificationFonctions {
 		tom.ajouterThematiques(Thematiques.ESPACE);
 		tom.ajouterThematiques(Thematiques.MUSIQUE);
 		//tom.ajouterPreferences("l'espace");
-		System.out.println(tom.getPreferences()[1]);
+		//System.out.println(tom.getPreferences()[1]);
 		//tom.ajouterPreferences("la musique");
 		//System.out.println(tom.getPreferences()[1]);
-		tom.choisirActivite(jeu1);
+		//tom.choisirActivite(jeu1);
 		
 		Endroit musee = new Endroit("Musee", 7, 0);
 		Endroit expo = new Endroit("Expo", 4, 0);
 		jeu1.ajouterEndroits(musee);
 		System.out.println(jeu1.getaVisiter()[0].getNom());
 		jeu1.ajouterEndroits(expo);
-		//System.out.println(jeu1.getaVisiter()[0].getNom()); à resoudre
+		//System.out.println(jeu1.getaVisiter()[0].getNom()); //à resoudre
 	}
 }

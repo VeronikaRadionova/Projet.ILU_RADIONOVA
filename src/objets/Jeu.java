@@ -27,7 +27,6 @@ public class Jeu extends Activite {
 	}
 
 
-
 	public void proposerJeu(Enfant enfant) {
 		parler(enfant.getNom() + ", veux-tu jouer à un jeu sur " + thematique + " ?");
 	}

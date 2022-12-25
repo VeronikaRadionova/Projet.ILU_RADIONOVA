@@ -67,41 +67,22 @@ public class Enfant {
 	
 	public void ajouterThematiques(Thematiques thematique) {
 		Thematiques[] thpreferes = new Thematiques[nbPreferences];
-		switch (thematique) {
-		case MUSIQUE :
-			thpreferes[nbPreferences-1] = thematique;
-			setNbPreferences(nbPreferences + 1);
-			break;
-		case SCIENCES :
-			thpreferes[nbPreferences-1] = thematique;
-			setNbPreferences(nbPreferences + 1);
-			break;
-		case MEDECINE :
-			thpreferes[nbPreferences-1] = thematique;
-			setNbPreferences(nbPreferences + 1);
-			break;
-		case NATURE :
-			thpreferes[nbPreferences-1] = thematique;
-			setNbPreferences(nbPreferences + 1);
-			break;
-		case ESPACE :
-			thpreferes[nbPreferences-1] = thematique;
-			setNbPreferences(nbPreferences + 1);
-			break;
-		case HISTOIRE :
-			thpreferes[nbPreferences-1] = thematique;
-			setNbPreferences(nbPreferences + 1);
-			break;
-		default :
-			setNbPreferences(nbPreferences);
-		}
+		int i = 0;
+		while (i < nbPreferences) {
+			if (thpreferes[i] != thematique) {
+				i = i + 1;
+			}
+		}	
+		thpreferes[nbPreferences-1] = thematique;
+		setNbPreferences(nbPreferences + 1);
+		
 		System.out.println(nbPreferences);
 	}
 	
 	
 	public int choisirActivite(Activite activite) {
-		for (int i = 0; i < nbPreferences-1; i++) {
-			if (preferences[i] == activite.getThematique() ) {
+		for (int i = 0; i < nbPreferences; i++) {
+			if (preferences[i] == activite.getThematique()) {
 				parler("Oui, pourquoi pas !!!");
 				return i;
 			}
