@@ -32,7 +32,6 @@ public class Enfant {
 		this.preferences = preferences;
 	}
 
-
 	public int getNbPreferences() {
 		return nbPreferences;
 	}

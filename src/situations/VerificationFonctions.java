@@ -12,6 +12,7 @@ public class VerificationFonctions {
 	public static void main(String[] args) {
 		Enfant tom = new Enfant("Tom", 0, 0, 1);
 		Jeu jeu1 = new Jeu(Thematiques.ESPACE,"pas fait",7,2);
+		tom.sePresenter();
 		tom.ajouterThematiques(Thematiques.ESPACE);
 		tom.ajouterThematiques(Thematiques.MUSIQUE);
 		//tom.ajouterPreferences("l'espace");
